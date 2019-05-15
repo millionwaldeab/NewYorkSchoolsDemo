@@ -7,6 +7,5 @@ import retrofit2.http.Query;
 
 public interface SchoolsApi {
     @GET("/resource/s3k6-pzi2.json")
-    Call<SchoolsResponse> getSchoolByCity(@Query("q") String city);
-
+    Call<SchoolsResponse> getSchoolDetails(@Query("q") String school);
 }

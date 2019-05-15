@@ -24,7 +24,6 @@ public class SchoolsResponse {
     @Expose
     private String schoolName;
 
-
     public String getDbn() {
         return dbn;
     }

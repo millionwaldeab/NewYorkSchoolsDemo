@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     @VisibleForTesting
     protected List<Schools> mSchoolsList = new ArrayList<>();
     private DialogInterface mDialog;
+    @VisibleForTesting
+    protected Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +42,12 @@ public class MainActivity extends AppCompatActivity {
         mSchoolHolder.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         mSchoolHolder.setItemAnimator(new DefaultItemAnimator());
         mSchoolHolder.setAdapter(mSchoolsAdapter);
+        mPresenter = new Presenter();
 
-        populateRecyclerView();
+        /*This populates the recyclerview with hard coded data*/
+        //populateRecyclerView();
+
+        populateRecyclerViewFromApi();
 
         mSchoolHolder.addOnItemTouchListener(new SchoolsItemTouch(getBaseContext(), mSchoolHolder, new ClickListener() {
             @Override
@@ -52,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }));
+    }
+
+    /**
+     * This will populate the recyclerview from Api data requested by the data layer
+     * */
+    private void populateRecyclerViewFromApi() {
+        mSchoolsList.add(mPresenter.getSchoolName());
+        mSchoolsAdapter.notifyDataSetChanged();
     }
 
     /*This is to show a dialog when a user selects on school.*/
