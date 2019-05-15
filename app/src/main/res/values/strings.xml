@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">20190514-MillionWaldeab-NYCSchools</string>
+    <string name="title_data_layer">Module Title</string>
+    <string name="tv_schools">Schools</string>
+    <string name="schoolTitle">School</string>
+    <string name="continue_viewing">Continue</string>
+    <string name="cancel_dialog">Cancel</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_text">60dp</dimen>
+    <dimen name="medium_text">160dp</dimen>
+    <dimen name="large_text">200dp</dimen>
+
+    <!--margin of recyclerview children-->
+    <dimen name="margin_start">8dp</dimen>
+    <dimen name="margin_top">8dp</dimen>
+    <dimen name="margin_end">8dp</dimen>
+</resources>
