@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.example.data_layer.network.requests.SchoolsRequest;
 import java.util.List;
 
 public class SchoolsAdapter extends RecyclerView.Adapter<SchoolsAdapter.SchoolArrayAdapter> {
@@ -28,6 +29,20 @@ public class SchoolsAdapter extends RecyclerView.Adapter<SchoolsAdapter.SchoolAr
     @Override
     public void onBindViewHolder(@NonNull SchoolArrayAdapter schoolArrayAdapter, int position) {
         Schools schools = mSchoolList.get(position);
+        /*SchoolsRequest request = new SchoolsRequest();
+        Schools schools = new Schools(request.mSchoolsResponse.getDbn(), request.mSchoolsResponse.getSchoolName(),
+                request.mSchoolsResponse.getNumOfSatTestTakers(), request.mSchoolsResponse.getSatCriticalReadingAvgScore(),
+                request.mSchoolsResponse.getSatMathAvgScore(), request.mSchoolsResponse.getSatWritingAvgScore(), "");
+
+        schoolArrayAdapter.dbn.setText(request.mSchoolsResponse.getDbn());
+        schoolArrayAdapter.name.setText(request.mSchoolsResponse.getSchoolName());
+        schoolArrayAdapter.boro.setText(request.mSchoolsResponse.getNumOfSatTestTakers());
+        schoolArrayAdapter.overview.setText(request.mSchoolsResponse.getSatCriticalReadingAvgScore());
+        schoolArrayAdapter.tenthSeats.setText(request.mSchoolsResponse.getSatMathAvgScore());
+        schoolArrayAdapter.academicOpportunists1.setText(request.mSchoolsResponse.getSatWritingAvgScore());
+        schoolArrayAdapter.academicOpportunists2.setText("");*/
+
+
         schoolArrayAdapter.dbn.setText(schools.getmDbn());
         schoolArrayAdapter.name.setText(schools.getmName());
         schoolArrayAdapter.boro.setText(schools.getmBoro());

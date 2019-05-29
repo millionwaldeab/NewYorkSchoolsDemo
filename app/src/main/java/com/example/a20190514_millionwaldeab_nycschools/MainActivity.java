@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-    /*This is harcoded data to populate the Recyclerview because the requirement wasn't clear whether to
+    /*This is hardcoded data to populate the Recyclerview because the requirement wasn't clear whether to
     * exract the data from a Rest Api or not. If that was tha case then there is a data layer implemented
     * to host a network package that will handle exceptions and data mapping to the Presenter layer and also
     * data layer Constants..etc; the Presenter layer would then populate the Recyclerview by replacing this
